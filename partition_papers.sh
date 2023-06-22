@@ -6,6 +6,7 @@
 #SBATCH --output=partitions/partition_log_ogbn-papers.txt
 
 # source /home/ubuntu/miniconda3/bin/activate
+source /home/apps/cdac/DL-CondaPy3.7/etc/profile.d/conda.sh
 conda activate envforgnn
 # module load anaconda3
 # module load codes/gpu/cuda/11.6

@@ -66,7 +66,7 @@ python3 training_code/launch_training.py \
         --num_omp_threads 1 \
         --part_config ${partition_path} \
         --ip_config ${ip_config_file} \
-            "python $training_file \
+            "source /home/apps/cdac/DL-CondaPy3.7/etc/profile.d/conda.sh; conda activate envforgnn; python $training_file \
             --graph_name $graph_name \
             --ip_config $ip_config_file \
             --num_epochs $num_epochs \
