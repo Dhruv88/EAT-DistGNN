@@ -5,7 +5,7 @@
 #SBATCH --partition=standard
 #SBATCH --output=partitions/partition_log_yelp.txt
 
-source /home/ubuntu/miniconda3/bin/activate
+# source /home/ubuntu/miniconda3/bin/activate
 conda activate envforgnn
 # module load anaconda3
 # module load codes/gpu/cuda/11.6
