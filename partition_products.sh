@@ -2,7 +2,7 @@
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=1
 #SBATCH --job-name=graph_partition
-#SBATCH --partition=compute
+#SBATCH --partition=standard
 #SBATCH --output=partitions/partition_log_ogbn-products.txt
 
 source /home/ubuntu/miniconda3/bin/activate
