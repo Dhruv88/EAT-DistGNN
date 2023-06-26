@@ -145,11 +145,11 @@ def train_model(model, loss_fcn, g, train_nid, device, metrics, args, val_nid, a
         return train_dataloader
 
     iter_tput = []
-    optimizer = optim.Adam([
-        {"params": model.parameters()},
-        {"params":[lmbda], "lr": args['lr']}
-        ],lr=args['lr'])
-    # optimizer = optim.Adam(model.parameters(),lr=args['lr'])
+    # optimizer = optim.Adam([
+    #     {"params": model.parameters()},
+    #     {"params":[lmbda], "lr": args['lr']}
+    #     ],lr=args['lr'])
+    optimizer = optim.Adam(model.parameters(),lr=args['lr'])
     scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=50, gamma=0.5)
     if args['graph_name'] == 'yelp':
         scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=40, gamma=0.3)
