@@ -283,7 +283,7 @@ def train_model(model, loss_fcn, g, train_nid, device, metrics, args, val_nid, a
                 print("Stopping Early")
                 break
 
-        print("rank:", g.rank(), "Final lambda:", lmbda)
+    print("rank:", g.rank(), "Final lambda:", lmbda)
     
 def calc_entropy(labels):
     # Count the frequency of each label
