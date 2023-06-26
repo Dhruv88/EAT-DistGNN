@@ -106,7 +106,6 @@ def evaluate(ensemble, g, inputs, labels, nid, batch_size, device, agg, n_classe
 
 def train_model(model, loss_fcn, g, train_nid, device, metrics, args, val_nid, agg, stopper=None, reg_model=None):
 
-    lmbda = th.tensor(args["llambda"], requires_grad=True)
     
     process = psutil.Process()
     A = g.local_partition.adj(scipy_fmt='coo')
@@ -201,8 +200,7 @@ def train_model(model, loss_fcn, g, train_nid, device, metrics, args, val_nid, a
                     regularization += th.sum((p2 - p1) ** 2)
                 # if g.rank() == 2:
                 #     print(loss, regularization, args['llambda'])
-                lmbda = th.clamp(lmbda, 0.0, 1.0)
-                loss = loss + lmbda*regularization
+                loss = loss + args["llambda"]*regularization
                 # if g.rank() == 2:
                 #     print(loss)
             loss.backward()
