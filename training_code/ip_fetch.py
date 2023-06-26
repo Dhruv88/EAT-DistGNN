@@ -10,8 +10,8 @@ import time
 
 with open(args.log_file) as f:
     lines = f.readlines()
-new_lines = [''.join([x.strip(), ".iitk.ac.in"]) for x in lines]
-with open('temp.txt', 'w') as f:
+new_lines = [''.join([x.strip(), ".iitk.ac.in"]) for x in lines if x[0] not in ['S', '=']]
+with open('training_code/ip_config.txt', 'w') as f:
     for j in new_lines:
         f.writelines(os.popen('cat /etc/hosts | grep -i {}'.format(j)).read())
-os.system("cut -d' ' -f1 temp.txt >> training_code/ip_config.txt")
+# os.system("cut -d' ' -f1 temp.txt >> training_code/ip_config.txt")
