@@ -1,5 +1,5 @@
 BEST_HPARAMS = {
-    'flickr': {
+    'flicekr': {
         'g': {
             'fan_out': '25,25',
             'num_hidden': 256,
