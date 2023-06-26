@@ -8,7 +8,7 @@ cmd = 'scontrol show hostnames'
 os.system(cmd)
 import time
 
-with open(argparse.log_file) as f:
+with open(args.log_file) as f:
     lines = f.readlines()
 new_lines = [''.join([x.strip(), ".iitk.ac.in"]) for x in lines]
 with open('temp.txt', 'w') as f:
