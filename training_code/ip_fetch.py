@@ -13,5 +13,5 @@ with open(args.log_file) as f:
 new_lines = [''.join([x.strip(), ".iitk.ac.in"]) for x in lines if x[0] not in ['S', '=']]
 with open('training_code/ip_config.txt', 'w') as f:
     for j in new_lines:
-        f.writelines(os.popen('cat /etc/hosts | grep -i {}'.format(j)).read().strip()[0]+'\n')
+        f.writelines(os.popen('cat /etc/hosts | grep -i {}'.format(j)).read().split(' ')[0]+'\n')
 # os.system("cut -d' ' -f1 temp.txt >> training_code/ip_config.txt")
