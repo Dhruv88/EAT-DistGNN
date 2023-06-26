@@ -3,9 +3,9 @@
 #SBATCH --ntasks-per-node=2
 #SBATCH --job-name=ogbn_products_exp
 #SBATCH --partition=standard
-#SBATCH --output=ogbn-products_logs.txt
+#SBATCH --output=experiments/ogbn-products_logs.txt
 
-python3 training_code/ip_fetch.py
+python3 training_code/ip_fetch.py --log_file "experiments/ogbn-products_logs.txt"
 sleep 5
 #module load python/conda-python/3.9
 #module list

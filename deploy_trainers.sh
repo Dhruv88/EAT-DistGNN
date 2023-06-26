@@ -1,6 +1,6 @@
 #default
 training_file="training_code/train_dist_genper_regularized.py"
-ip_config_file="training_code/ip_config1234_30054.txt"
+ip_config_file="training_code/ip_config.txt"
 num_epochs=100
 batch_size=1000
 hidden=512
