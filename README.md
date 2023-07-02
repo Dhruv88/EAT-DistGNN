@@ -39,7 +39,7 @@ We have used five datasets from different domains. The details about them are as
 
 ## Setup Environment
 
-Refer to [this doc](https://github.com/Dhruv88/EAT-DistGNN/blob/main/Env_Setup.pdf)
+Refer to [this doc](https://anonymous.4open.science/r/EAT-DistGNN-398C/Env_setup.pdf)
 
 ## Make Partitions
 
